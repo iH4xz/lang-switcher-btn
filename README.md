@@ -1,8 +1,8 @@
 # مُبدِّل اللغة لـ Stream Deck (Language Switcher)
 
 <p align="center">
-  <img src="docs/preview-en.png" width="100" alt="EN Button">
-  <img src="docs/preview-ar.png" width="100" alt="AR Button">
+  <img src="com.ih4xz.langbutton.sdPlugin/imgs/action-icon.png" width="100" alt="EN Action Icon">
+  <img src="com.ih4xz.langbutton.sdPlugin/imgs/plugin-icon.png" width="100" alt="AR Plugin Icon">
 </p>
 
 > 🌐 اعرض وبدّل لغة إدخال لوحة المفاتيح الحالية (EN/AR) بضغطة زر واحدة على Stream Deck.
