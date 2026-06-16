@@ -3,17 +3,17 @@
   "Name": "Language Switcher",
   "Description": "Display and switch keyboard input language (EN/AR) with a single button press. Cute dark-mode icons with bright indicators.",
   "UUID": "com.ih4xz.langbutton",
-  "Version": "1.0.0",
+  "Version": "1.2.0.0",
   "Author": "iH4xz",
   "URL": "https://ih4xz.pro/projects/lang-switcher-btn/",
-  "SDKVersion": 2,
+  "SDKVersion": 3,
   "CodePath": "bin/plugin.js",
   "Nodejs": {
     "Version": "20",
     "Debug": "enabled"
   },
   "Software": {
-    "MinimumVersion": "6.6"
+    "MinimumVersion": "6.9"
   },
   "OS": [
     {
@@ -35,7 +35,7 @@
         {
           "Image": "imgs/action-icon",
           "TitleAlignment": "bottom",
-          "FontSize": "9",
+          "FontSize": 9,
           "ShowTitle": false
         }
       ]

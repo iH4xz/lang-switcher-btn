@@ -5,6 +5,7 @@
  */
 
 import {
+	action,
 	SingletonAction,
 	type KeyDownEvent,
 	type WillAppearEvent,
@@ -21,8 +22,8 @@ const POLL_INTERVAL_MS = 1500;
 /** Delay after switching before re-polling (let Windows settle) */
 const SWITCH_SETTLE_MS = 350;
 
+@action({ UUID: "com.ih4xz.langbutton.switch" })
 export class LangSwitchAction extends SingletonAction {
-	override readonly manifestId = "com.ih4xz.langbutton.switch";
 
 	/**
 	 * Map of action instance IDs → their polling timers.

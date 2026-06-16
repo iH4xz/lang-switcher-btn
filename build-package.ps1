@@ -87,7 +87,7 @@ Invoke-ps2exe `
     -Description "Installs the Language Switcher Stream Deck plugin by iH4xz" `
     -Company     "iH4xz" `
     -Product     "Language Switcher for Stream Deck" `
-    -Version     "1.0.0.0" `
+    -Version     "1.2.0.0" `
     -Copyright   "GPL-3.0 - iH4xz 2026 - ih4xz.pro" `
     -noConsole
 
