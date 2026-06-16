@@ -1,13 +1,59 @@
-# Language Switcher for Stream Deck
+# مُبدِّل اللغة لـ Stream Deck (Language Switcher)
 
 <p align="center">
   <img src="docs/preview-en.png" width="100" alt="EN Button">
   <img src="docs/preview-ar.png" width="100" alt="AR Button">
 </p>
 
+> 🌐 اعرض وبدّل لغة إدخال لوحة المفاتيح الحالية (EN/AR) بضغطة زر واحدة على Stream Deck.
+
+أزرار رائعة المظهر في الوضع الداكن مع مؤشرات مضيئة ساطعة. مصمم خصيصاً لويندوز 10/11.
+
+## المميزات
+
+- **عرض فوري ومباشر للغة** — يعرض لغة لوحة المفاتيح الحالية (EN أو ع) على الزر في الوقت الفعلي.
+- **تبديل بضغطة واحدة** — اضغط على الزر للتبديل بين اللغتين العربية والإنجليزية.
+- **تصميم داكن جذاب** — تأثير توهج باللون السماوي (EN) والوردي (AR) مع خلفية متدرجة أنيقة.
+- **بدون تبعيات ثقيلة** — لا حاجة لبناء مكتبات فجّة؛ يستخدم سكربت PowerShell للوصول الفوري لـ Win32 API.
+- **خفيف جداً** — يتحقق من اللغة كل 1.5 ثانية باستهلاك يكاد ينعدم للمعالج.
+
+## المتطلبات
+
+- برنامج **Stream Deck Software** 6.6 أو أحدث.
+- نظام تشغيل **ويندوز 10 أو 11**.
+- مدمج تلقائياً مع Stream Deck SDK.
+
+## التثبيت
+
+### الخيار الأسهل (التثبيت بنقرة واحدة)
+
+1. حمّل أحدث ملف `com.ih4xz.langbutton.streamDeckPlugin` من [صفحة الإصدارات (Releases)](https://github.com/iH4xz/lang-switcher-btn/releases).
+2. **انقر نقراً مزدوجاً** على الملف المحمّل لتثبيته مباشرة داخل تطبيق Stream Deck.
+
+### التثبيت اليدوي
+
+1. استنسخ هذا المستودع:
+   ```bash
+   git clone https://github.com/iH4xz/lang-switcher-btn.git
+   ```
+2. ثبّت التبعيات وابني الإضافة:
+   ```bash
+   npm install
+   npm run build
+   ```
+3. انسخ المجلد `com.ih4xz.langbutton.sdPlugin` إلى مسار إضافات Stream Deck:
+   ```
+   %APPDATA%\Elgato\StreamDeck\Plugins\
+   ```
+4. أعد تشغيل برنامج Stream Deck.
+
+---
+
+# Language Switcher for Stream Deck
+
 > 🌐 Display and switch your keyboard input language (EN/AR) with a single Stream Deck button press.
 
-Cute dark-mode icons with bright glowing indicators. Made for Windows 11.
+Cute dark-mode icons with bright glowing indicators. Made for Windows 10/11.
 
 ## Features
 
@@ -25,10 +71,10 @@ Cute dark-mode icons with bright glowing indicators. Made for Windows 11.
 
 ## Installation
 
-### From Release
+### Easy Install (One-Click)
 
 1. Download the latest `.streamDeckPlugin` file from [Releases](https://github.com/iH4xz/lang-switcher-btn/releases)
-2. Double-click the file to install it in Stream Deck
+2. Double-click the downloaded file to install it in Stream Deck
 
 ### Manual Install
 
@@ -62,9 +108,9 @@ npm run watch
 
 ## How It Works
 
-1. **Detection**: Uses PowerShell P/Invoke to call Win32 `GetKeyboardLayout()` API on the foreground window's thread
-2. **Rendering**: Dynamically generates SVG button images with glow effects and pushes them via `setImage()`
-3. **Switching**: Simulates `Alt+Shift` keypress via `keybd_event()` to toggle the Windows input language
+1. **Detection**: Uses PowerShell P/Invoke to call Win32 `GetKeyboardLayout()` API on the foreground window's thread.
+2. **Rendering**: Dynamically generates SVG button images with glow effects and pushes them via `setImage()`.
+3. **Switching**: Simulates `Alt+Shift` keypress via `keybd_event()` to toggle the Windows input language.
 
 ## Configuration
 

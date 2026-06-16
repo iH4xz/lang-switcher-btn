@@ -44,8 +44,9 @@ if (Test-Path $sdpOut) { Remove-Item $sdpOut -Force }
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 Add-Type -AssemblyName System.IO.Compression
 $zip = [System.IO.Compression.ZipFile]::Open($sdpOut, [System.IO.Compression.ZipArchiveMode]::Create)
+$parent = Split-Path (Resolve-Path $PLUGIN).Path -Parent
 Get-ChildItem $PLUGIN -Recurse -File | ForEach-Object {
-    $entryName = $_.FullName.Substring((Resolve-Path $PLUGIN).Path.Length + 1).Replace("\", "/")
+    $entryName = $_.FullName.Substring($parent.Length + 1).Replace("\", "/")
     [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $_.FullName, $entryName) | Out-Null
 }
 $zip.Dispose()
