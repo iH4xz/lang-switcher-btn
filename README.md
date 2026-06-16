@@ -47,6 +47,40 @@
    ```
 4. أعد تشغيل برنامج Stream Deck.
 
+## التطوير
+
+```bash
+# تثبيت التبعيات
+npm install
+
+# بناء المشروع لمرة واحدة
+npm run build
+
+# وضع المراقبة (بناء تلقائي + تحديث فوري في Stream Deck)
+npm run watch
+```
+
+## كيف يعمل
+
+1. **الكشف**: يستخدم PowerShell P/Invoke لاستدعاء Win32 API `GetKeyboardLayout()` على سلسلة الرسائل الخاصة بالنافذة الأمامية النشطة.
+2. **الرسم**: ينشئ ديناميكياً صور أزرار بصيغة SVG مع تأثيرات توهج جذابة ويرسلها عبر `setImage()`.
+3. **التبديل**: يحاكي ضغط المفاتيح `Alt+Shift` عبر `keybd_event()` لتبديل لغة الإدخال في نظام ويندوز.
+
+## الإعدادات
+
+تستخدم هذه الإضافة اختصار `Alt+Shift` لتبديل اللغات. إذا كنت تستخدم اختصاراً مختلفاً (على سبيل المثال، `Win+Space`)، قم بتعديل الملف `scripts/switch-language.ps1`.
+
+## المطوّر
+
+**iH4xz** — [ih4xz.pro](https://ih4xz.pro)
+
+- صفحة المشروع: [ih4xz.pro/projects/lang-switcher-btn](https://ih4xz.pro/projects/lang-switcher-btn/)
+- جيت هاب: [github.com/iH4xz/lang-switcher-btn](https://github.com/iH4xz/lang-switcher-btn)
+
+## الترخيص
+
+هذا المشروع مرخص بموجب رخصة [GNU General Public License v3.0](LICENSE) — راجع ملف LICENSE لمعرفة التفاصيل.
+
 ---
 
 # Language Switcher for Stream Deck
