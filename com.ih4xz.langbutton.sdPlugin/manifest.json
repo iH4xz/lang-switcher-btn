@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Name": "Language Switcher",
+  "Description": "Display and switch keyboard input language (EN/AR) with a single button press. Cute dark-mode icons with bright indicators.",
+  "UUID": "com.ih4xz.langbutton",
+  "Version": "1.0.0",
+  "Author": "iH4xz",
+  "URL": "https://ih4xz.pro/projects/lang-switcher-btn/",
+  "SDKVersion": 2,
+  "CodePath": "bin/plugin.js",
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "Software": {
+    "MinimumVersion": "6.6"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Category": "Language Switcher",
+  "CategoryIcon": "imgs/plugin-icon",
+  "Icon": "imgs/plugin-icon",
+  "Actions": [
+    {
+      "UUID": "com.ih4xz.langbutton.switch",
+      "Name": "Language Switch",
+      "Icon": "imgs/action-icon",
+      "Tooltip": "Shows current keyboard language and toggles between EN/AR on press",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/action-icon",
+          "TitleAlignment": "bottom",
+          "FontSize": "9",
+          "ShowTitle": false
+        }
+      ]
+    }
+  ]
+}
